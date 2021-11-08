@@ -5,6 +5,7 @@ This is the primary file for the API
 //Dependecies
 const http = require('http');
 const url = require('url');
+const config = require('./config');
 
 //Create server to respond to requests with a string
 const server = http.createServer((req, res) => {
@@ -12,7 +13,7 @@ const server = http.createServer((req, res) => {
 })
 
 // Fire up server
-let port = 3000;
+let port = config.port;
 server.listen(port, ()=>{
     console.log("Server is live and listening on port ", port);
 })
