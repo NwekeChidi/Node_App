@@ -15,5 +15,5 @@ const server = http.createServer((req, res) => {
 // Fire up server
 let port = config.port;
 server.listen(port, ()=>{
-    console.log("Server is live and listening on port ", port);
+    console.log("Server is live and listening on port",port, "in", config.envName, "mode.");
 })
